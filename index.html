@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Lookup</title>
+    <link rel="stylesheet" href="depen/xigniteTypeahead.css">
+    <script src="https://use.fontawesome.com/ffbd613272.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    
+    <!-- <link rel="stylesheet" href="/depen/jquery-ui.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="depen/select2-bootstrap.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- javascript dependencies -->
+    <script src="depen/jquery-3.0.0.min.js"></script>
+    <script src="depen/jquery-ui.min.js"></script>
+    <script src="depen/jquery.xigniteTypeahead.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="depen/moment-msdate.js"></script>
+    <script src="https://code.highcharts.com"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    
+    
+    
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>Stock Search</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12 col-md-offset-3">
+                    <div class="input-group">
+                        <select type="text" class="form-control" id="stockNames" placeholder="Start Typing Name or Symbol (i.e. AAPL)"></select>
+                        <span class="input-group-btn">
+          <br><button class="btn btn-default" id="symbolSearch">Search</button>
+        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-primary mainTable">
+                    <div class="panel-heading">
+                        <h4 class="text-center">Results</h4></div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Last Price</th>
+                                        <th>Change</th>
+                                        <th>Change Percent</th>
+                                        <th>Change Percent YTD</th>
+                                        <th>Last Traded</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="stockInfo">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12" id="charts">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tr class="template">
+            <th scope="row" class="name"></th>
+            <td class="price"></td>
+            <td class="change"></td>
+            <td class="changePercent"></td>
+            <td class="YTD"></td>
+            <td class="lastTrade"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
